@@ -23,7 +23,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ShowMemories"></activity>
+        <activity android:name=".DetailsRegister"></activity>
+        <activity android:name=".ShowMemories" />
         <activity android:name=".NewMemory" />
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -38,7 +39,7 @@
             android:value="" />
         <meta-data
             android:name="DATABASE"
-            android:value="bancoMemoria3.db" />
+            android:value="bancoMemoria5.db" />
         <meta-data
             android:name="VERSION"
             android:value="1" />

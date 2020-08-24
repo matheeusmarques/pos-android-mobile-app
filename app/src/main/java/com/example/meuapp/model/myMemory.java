@@ -2,13 +2,15 @@ package com.example.meuapp.model;
 
 import com.orm.SugarRecord;
 
+import java.util.Date;
+
 public class myMemory extends SugarRecord<myMemory> {
 
-    public myMemory(String title, String description, String image_1, String coord_x, String coord_y) {
+    public myMemory(String title, String description, String image_1, Date date_memory, String coord_y) {
         this.title = title;
         this.description = description;
         this.image_1 = image_1;
-        this.coord_x = coord_x;
+        this.date_memory = date_memory;
         this.coord_y = coord_y;
     }
 
@@ -18,7 +20,7 @@ public class myMemory extends SugarRecord<myMemory> {
     private String title;
     private String description;
     private String image_1;
-    private String coord_x;
+    private Date date_memory = new Date();
     private String coord_y;
 
     public String getTitle() {
@@ -33,6 +35,7 @@ public class myMemory extends SugarRecord<myMemory> {
         return description;
     }
 
+
     public void setDescription(String description) {
         this.description = description;
     }
@@ -45,12 +48,12 @@ public class myMemory extends SugarRecord<myMemory> {
         this.image_1 = image_1;
     }
 
-    public String getCoord_x() {
-        return coord_x;
+    public Date getDate_memory() {
+        return date_memory;
     }
 
-    public void setCoord_x(String coord_x) {
-        this.coord_x = coord_x;
+    public void setDate_memory(Date date_memory) {
+        this.date_memory = date_memory;
     }
 
     public String getCoord_y() {

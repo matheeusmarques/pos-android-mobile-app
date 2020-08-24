@@ -11,6 +11,8 @@ import com.example.meuapp.model.myMemory;
 
 import org.w3c.dom.Text;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.List;
 
 public class ListMemoriesAdapter extends BaseAdapter {
@@ -41,8 +43,13 @@ public class ListMemoriesAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         View row = LayoutInflater.from(context).inflate(R.layout.rowmemory, parent, false);
         myMemory myMemory = memories.get(position);
-        TextView textView = row.findViewById(R.id.textId);
-        textView.setText(myMemory.getDescription());
+        TextView textView = row.findViewById(R.id.textTitleRow);
+        textView.setText(myMemory.getTitle());
+
+
+        DateFormat format = new SimpleDateFormat("dd/MM/yyyy");
+        TextView memoryDate = row.findViewById(R.id.textDateRow);
+        memoryDate.setText(format.format(myMemory.getDate_memory()));
 
         return row;
     }
